@@ -1,0 +1,105 @@
+*{
+    font-family:Arial, Helvetica, sans-serif, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    margin:0px;
+}
+#navbartop{
+    width:100%;
+    margin:0px;
+    height:auto;
+    border-bottom:solid 1px rgb(225, 220, 220);
+    background-color: none;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: white;
+   
+}
+#navbartop>div:nth-child(1){
+    margin-left:10px;
+    margin-right:15px;
+    width:8%;
+    border:solid 0px;
+    padding-top:5px;
+    
+}
+#navbartop>div:nth-child(1)>img{
+    width:100%;
+    border:solid 0px;
+    cursor:pointer;
+}
+#navbartop>div:nth-child(2){
+    width:58%;
+    display:flex;
+    flex-direction: row;
+    border:solid 0px;
+    justify-content:space-around;
+    font-size:15px;   
+}
+#navbartop>div:nth-child(2) h4{
+    margin-top:10px;
+    margin-bottom:5px;
+    font-weight:600; 
+}
+#navbartop>div:nth-child(2) h4:nth-child(1){
+    color:#ff6f61;
+}
+
+#navbartop>div:nth-child(2) h4:hover{
+    color:#ff6f61;
+    cursor:pointer;
+}
+#navbartop>div:nth-child(3){
+    border:solid 0px;
+    width:20%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size:12px;
+    cursor:pointer;
+   
+}
+#navbartop>div:nth-child(3)>div{
+    display:flex;
+    flex-direction: row;
+    cursor:pointer;
+}
+#navbartop>div:last-child{
+    text-align: center;
+    cursor:pointer;
+}
+#navbartop>div:nth-child(3)>div:last-child{
+    padding-top:12px;
+    border:solid 0px;
+    width:15%;
+    font-size:20px;
+    transform: scaleX(-1);
+}
+#navbartop>div:last-child{
+   border:solid 0px;
+   font-size:12px;
+}
+
+
+@media all and (max-width: 1000px) and (min-width:600px){
+    #navbartop>div:nth-child(2){
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows:repeat(2,30px);
+       
+    }
+}
+@media all and (max-width: 600px) and (min-width:300px){
+    #navbartop>div:nth-child(2){
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:repeat(3,30px);
+       
+    }
+    #navbartop>div:nth-child(3){
+        display:flex;
+        flex-direction:column;
+        padding-bottom:20px;
+    }
+}

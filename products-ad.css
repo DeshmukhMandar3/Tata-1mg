@@ -1,0 +1,97 @@
+body{
+    background-color: #f1f4f6;
+}
+#ad-1{
+    width:100%;
+    border-bottom:solid 1px rgb(212, 208, 208);
+    display:flex;
+    height:auto;
+    background-color: white;
+    
+}
+#ad-1 img{
+    width:100%;
+    height:100%;
+}
+#ad-1>:first-child{
+    width:75%;
+    margin:0px;
+}
+#ad-1>:last-child{
+    width:25%;
+    margin:0px;
+}
+#mg{
+    font-size:22px;
+    text-align:center;
+    color:grey;
+    border:solid 1px rgb(212, 208, 208);
+    background-color: white;
+    margin:0px;
+}
+#ad-2{
+    width:100%;
+    height:auto;
+    padding:25px;
+    
+}
+#ad-2>img{
+    width:90%;
+    padding:20px;
+    margin:auto;
+}
+#pd{
+    background-color: white;
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    margin-bottom:15px;
+    margin-top:10px;
+}
+#pd>div{
+    width:14%;
+    padding:25px;
+    text-align:center;
+    
+}
+#pd>div:hover{box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
+#pd>div>img{
+    width:80%;
+}
+label{
+    margin-left:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 1000px) and (min-width:600px){
+    #ad-1{
+        flex-direction:column;
+    }
+    #ad-1>:first-child{
+        width:100%;
+    }
+    #ad-1>:last-child{
+        width:100%; 
+}
+}
+@media all and (max-width: 600px) and (min-width:300px){
+    #ad-1{
+        flex-direction:column;
+    }
+    #ad-1>:first-child{
+        width:100%;
+    }
+    #ad-1>:last-child{
+        width:100%; 
+}
+}
