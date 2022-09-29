@@ -40,29 +40,182 @@ body{
     padding:20px;
     margin:auto;
 }
-#pd{
+.pd{
     background-color: white;
     width:100%;
-    display:flex;
-    flex-wrap:wrap;
+    margin:auto;
+    border:solid red 0px;
+    overflow-x:auto;
     margin-bottom:15px;
     margin-top:10px;
 }
-#pd>div{
-    width:14%;
-    padding:25px;
-    text-align:center;
-    
+.product-container{
+    width:150%;
+    display:flex;
+    justify-content: center;
+    border:solid 0px;
+    margin:auto;
 }
-#pd>div:hover{box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
-#pd>div>img{
+.product-card{
+    text-align:center;
+    width:10%;
+    border:solid 0px;
+    padding:5px;
+}
+
+.pd>div>div:hover{box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+cursor:pointer;}
+.pd>div>div>img{
     width:80%;
 }
 label{
     margin-left:10px;
 }
+/* #pd::-webkit-scrollbar {
+    display: none;
+} */
 
 
+/* Full Body Checkup */
+.lb-bt{
+    height:60px;
+    display:flex;
+    justify-content: space-between;
+    align-items: end;
+    padding:10px;
+}
+.lb-bt>button{
+    background-color: orangered;
+    font-size: 10px;
+    border:none;
+    border-radius: 5px;
+    color:white;
+
+}
+
+#fbc{
+    width:175%;
+    display:flex;
+    justify-content: space-evenly;
+    margin:auto;
+    gap:10px;
+    background-color:white;
+    padding:5px;
+}
+.box{
+    border:solid;
+    width:15%;
+    padding:10px;
+    border-radius: 10px;
+    border: solid rgb(187, 181, 181) 1px;
+
+}
+.box:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.box>div:first-child{
+    padding:0px;
+    width:95%;
+    height:30px;
+    display:flex;
+    border:solid blue 0px;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    margin-top:2px;
+    margin-bottom:2px;
+}
+.box>div:first-child>img{
+    width:5%;
+    height:15px
+}
+.tata{
+    border:solid 1px rgb(206, 191, 191);
+    width:27%;
+    height:40px;
+}
+.star{
+    display:flex;
+    border:solid red;
+    width:20%;
+    height:18px;
+    align-items:center;
+    justify-content: space-evenly;
+    font-size:12px;
+    background-color: rgb(15, 198, 15);
+    color:white;
+    border-radius:5px;
+    border:none;
+}
+.imstar{
+    border:solid blue 0px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-top:2px;
+    margin-bottom:2px;
+    
+}
+.price{
+    font-size:17px;
+    font-weight: bold;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:2px;
+    margin-bottom:2px;
+}
+.price>p:first-child{
+  font-size:14px;
+}
+ .price>p:last-child{
+    font-size:12px;
+    font-weight: lighter;
+    text-decoration: line-through;
+    color:rgb(91, 88, 88);
+ }
+ .disc{
+    border:dashed green;
+    width:40px;
+    height:15px;
+    font-size:12px;
+    display:flex;
+    align-items: center;
+    font-weight: bold;
+    padding:3px;
+    background-color:rgb(136, 231, 136);
+    color:green;
+    margin-top:2px;
+    margin-bottom:2px;
+ }
+ .box p{
+    font-size:12px;
+ }
+#skt{
+    width:100%;
+    overflow:auto;
+}
+.fb{
+    height:60px;
+    display:flex;
+    justify-content: space-between;
+    align-items: end;
+    padding:10px; 
+}
+.fb>button{
+    background-color: orangered;
+    font-size: 10px;
+    border:none;
+    border-radius: 5px;
+    color:white;
+}
+.path{
+    width:100%;
+    background-color: white;
+}
+.pt>div{
+    border:solid red;
+}
 
 
 
@@ -83,6 +236,7 @@ label{
     #ad-1>:last-child{
         width:100%; 
 }
+
 }
 @media all and (max-width: 600px) and (min-width:300px){
     #ad-1{
@@ -93,5 +247,8 @@ label{
     }
     #ad-1>:last-child{
         width:100%; 
+}
+.product-card{
+    font-size:10px;
 }
 }
