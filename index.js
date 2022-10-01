@@ -402,7 +402,78 @@ let deals=[
 let pc=document.querySelector(".pc");
 displayProducts(deals,pc);
 
+// Signup popup
 let signup=document.querySelector(".signup");
 function signpop(){
     signup.classList.add("si-popup");
+    loginp.classList.remove("pop");
+}
+
+// Signup Submit
+let form=document.querySelector("#signup");
+form.addEventListener("submit",sisub);
+
+let signdata=JSON.parse(localStorage.getItem("signupdata")) || [];
+function sisub(event){
+     event.preventDefault();
+     let em=form.mail.value;
+     let pas=form.pass.value;
+     let obj={
+        email:em,
+        pass:pas,
+     }
+     if(form.first.value=="" || form.last.value=="" || form.mail.value=="" || form.pass.value==""){
+        alert("Please fill all the details");
+        console.log("Please fill all the details");
+     }
+     else{
+    signdata.push(obj);
+    localStorage.setItem("signupdata",JSON.stringify(signdata));
+    form.first.value="" 
+    form.last.value=""
+    form.mail.value="" 
+    form.pass.value=""
+    signup.classList.remove("si-popup")}    
+}
+
+// Login popup
+let loginp=document.querySelector(".login");
+function logpop(){
+    loginp.classList.add("pop");
+    signup.classList.remove("si-popup");
+}
+
+// login data
+let logindata=document.querySelector("#lform");
+logindata.addEventListener("submit",login)
+
+let Logsuccess=document.querySelector(".LS");
+
+function login(event){
+    event.preventDefault();
+    let flag=false;
+    signdata.forEach(function(el){
+        if(logindata.lmail.value==el.email && logindata.lpass.value==el.pass){
+            Logsuccess.classList.add("pop");
+            flag=true;
+            loginp.classList.remove("pop");
+            logindata.lmail.value="";
+            logindata.lpass.value="";
+        }
+    })
+    if(!flag){
+        alert("Wrong Email Id or Password");
+    }
+}
+
+function closeLS(){
+    Logsuccess.classList.remove("pop");
+}
+
+
+function closeall(){
+    loginp.classList.remove("pop");
+    signup.classList.remove("si-popup");
+    console.log("a");
+    
 }
