@@ -477,3 +477,7 @@ function closeall(){
     console.log("a");
     
 }
+
+function opencart(){
+    window.open("cart.html");
+}
